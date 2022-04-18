@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사과를 담을 바구니의 수 계산"
+        android:textSize="20dp"
+        android:id="@+id/tvQuestion"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll1"
+        android:layout_below="@id/tvQuestion">
+
+        <ImageView
+            android:id="@+id/ivApple"
+            android:layout_width="137dp"
+            android:layout_height="127dp"
+            android:src="@drawable/apple" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몇 개 있나요? : "
+            android:layout_gravity="center"
+            android:textSize="27dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/etInputApple"
+            android:textAlignment="center"
+            android:hint="ex) 32"
+            android:layout_gravity="center"
+            android:textSize="27dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계산"
+        android:id="@+id/btnCalculate"
+        android:layout_below="@id/ll1"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#FFF3E0"
+        android:textColor="@color/black"
+        android:onClick="onClickBasketNumber"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="필요한 바구니의 수 : "
+        android:id="@+id/tvBasketComment"
+        android:layout_below="@id/btnCalculate"
+        android:textSize="27dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBasketComment"
+        android:layout_centerHorizontal="true"
+        android:text="_ _개"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+</RelativeLayout>
